@@ -1,0 +1,22 @@
+PODS:
+  - EvrythngiOS (0.0.18)
+
+DEPENDENCIES:
+  - EvrythngiOS (from `https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git`, tag `0.0.192`)
+
+EXTERNAL SOURCES:
+  EvrythngiOS:
+    :git: https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git
+    :tag: 0.0.192
+
+CHECKOUT OPTIONS:
+  EvrythngiOS:
+    :git: https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git
+    :tag: 0.0.192
+
+SPEC CHECKSUMS:
+  EvrythngiOS: 3be9565fd69c0841797d30486c565989c99b7234
+
+PODFILE CHECKSUM: b6287b8f36cd214439d5ff535f92332e56bc3680
+
+COCOAPODS: 1.2.1

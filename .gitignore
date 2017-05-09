@@ -1,0 +1,70 @@
+Pods/Manifest.lock
+Pods/EvrythngiOS/LICENSE
+Pods/EvrythngiOS/license.md
+Pods/EvrythngiOS/README.md
+Pods/EvrythngiOS/Evrythng-iOS/AbstractUser.swift
+Pods/EvrythngiOS/Evrythng-iOS/Constants.swift
+Pods/EvrythngiOS/Evrythng-iOS/Evrythng.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngDelegate.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngError.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngiOS.h
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngNetworkService.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngScanner.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngScannerDelegate.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngScannerError.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngScannerResultDelegate.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngScannerVC.swift
+Pods/EvrythngiOS/Evrythng-iOS/Product.swift
+Pods/EvrythngiOS/Evrythng-iOS/StringUtils.swift
+Pods/EvrythngiOS/Evrythng-iOS/Thng.swift
+Pods/EvrythngiOS/Evrythng-iOS/User.swift
+Pods/EvrythngiOS/Evrythng-iOS/UserDelegate.swift
+Pods/Local Podspecs/EvrythngiOS.podspec.json
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/EvrythngiOS.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Pods-Evrythng-iOS-SampleApp.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Pods-Evrythng-iOS-SampleAppTests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Pods-Evrythng-iOS-SampleAppUITests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Target Support Files/EvrythngiOS/EvrythngiOS-dummy.m
+Pods/Target Support Files/EvrythngiOS/EvrythngiOS-prefix.pch
+Pods/Target Support Files/EvrythngiOS/EvrythngiOS-umbrella.h
+Pods/Target Support Files/EvrythngiOS/EvrythngiOS.modulemap
+Pods/Target Support Files/EvrythngiOS/EvrythngiOS.xcconfig
+Pods/Target Support Files/EvrythngiOS/Info.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Info.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp-acknowledgements.markdown
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp-acknowledgements.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp-dummy.m
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp-frameworks.sh
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp-resources.sh
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp-umbrella.h
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp.debug.xcconfig
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp.modulemap
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleApp/Pods-Evrythng-iOS-SampleApp.release.xcconfig
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Info.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests-acknowledgements.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests-dummy.m
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests-frameworks.sh
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests-resources.sh
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests-umbrella.h
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests.debug.xcconfig
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests.modulemap
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppTests/Pods-Evrythng-iOS-SampleAppTests.release.xcconfig
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Info.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests-acknowledgements.markdown
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests-acknowledgements.plist
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests-dummy.m
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests-frameworks.sh
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests-resources.sh
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests-umbrella.h
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests.debug.xcconfig
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests.modulemap
+Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests.release.xcconfig
+Evrythng-iOS-SampleApp.xcodeproj/project.pbxproj
+Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcshareddata/Evrythng-iOS-SampleApp.xcscmblueprint
+Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
+Evrythng-iOS-SampleApp.xcworkspace/contents.xcworkspacedata
+Evrythng-iOS-SampleApp.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
