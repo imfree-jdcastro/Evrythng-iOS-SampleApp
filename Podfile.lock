@@ -1,22 +1,60 @@
 PODS:
-  - EvrythngiOS (0.0.18)
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - EvrythngiOS (0.0.204):
+    - Alamofire (~> 4.4)
+    - AlamofireObjectMapper (~> 4.1)
+    - Moya (~> 8.0.3)
+    - Moya-SwiftyJSONMapper (~> 2.2)
+    - MoyaSugar (~> 0.4)
+    - SwiftEventBus (~> 2.1)
+    - SwiftyJSON (~> 3.1)
+  - Moya (8.0.3):
+    - Moya/Core (= 8.0.3)
+  - Moya-SwiftyJSONMapper (2.2.0):
+    - Moya-SwiftyJSONMapper/Core (= 2.2.0)
+  - Moya-SwiftyJSONMapper/Core (2.2.0):
+    - Moya (~> 8.0.0)
+    - SwiftyJSON
+  - Moya/Core (8.0.3):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - MoyaSugar (0.4.0):
+    - MoyaSugar/Core (= 0.4.0)
+  - MoyaSugar/Core (0.4.0):
+    - Moya (>= 8.0.0)
+  - ObjectMapper (2.2.6)
+  - Result (3.2.1)
+  - SwiftEventBus (2.1.2)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - EvrythngiOS (from `https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git`, tag `0.0.192`)
+  - EvrythngiOS (from `https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git`, tag `0.0.205`)
 
 EXTERNAL SOURCES:
   EvrythngiOS:
     :git: https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git
-    :tag: 0.0.192
+    :tag: 0.0.205
 
 CHECKOUT OPTIONS:
   EvrythngiOS:
     :git: https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git
-    :tag: 0.0.192
+    :tag: 0.0.205
 
 SPEC CHECKSUMS:
-  EvrythngiOS: 3be9565fd69c0841797d30486c565989c99b7234
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  EvrythngiOS: d190b85c18d6431d11a6f8cb7a6b2d39699c3b4f
+  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  Moya-SwiftyJSONMapper: 03c9d3e562c9025c8c00fa3ec97ae1da61a2be37
+  MoyaSugar: 302175740302bed7309b9483c4a3321631eab753
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  SwiftEventBus: 9e8f6d8cff2826d66536ec367d17a47299478aa0
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b6287b8f36cd214439d5ff535f92332e56bc3680
+PODFILE CHECKSUM: 20dc46985f30258b91ef6ece4db6ef35de5a4001
 
 COCOAPODS: 1.2.1

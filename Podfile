@@ -6,7 +6,7 @@ target 'Evrythng-iOS-SampleApp' do
   use_frameworks!
 
   # Pods for Evrythng-iOS-SampleApp
-  pod 'EvrythngiOS', :git => 'https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git', :tag => '0.0.192'
+  pod 'EvrythngiOS', :git => 'https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git', :tag => '0.0.205'
 
   target 'Evrythng-iOS-SampleAppTests' do
     inherit! :search_paths

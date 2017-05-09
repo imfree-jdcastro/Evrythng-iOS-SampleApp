@@ -8,6 +8,7 @@
 
 import UIKit
 import EvrythngiOS
+import Moya
 
 class ViewController: UIViewController {
 
@@ -15,18 +16,29 @@ class ViewController: UIViewController {
     
     @IBAction func actionScan(_ sender: UIButton) {
         let evrythngScanner = EvrythngScanner.init(presentingVC: self)
-        //evrythngScanner.scanBarcode()
-        let result = evrythngScanner.queryScanResult(barcode: "own_vc_1234567")
-        print("Query Scan Result: \(result.result)")
+        evrythngScanner.scanBarcode()
+        //let result = evrythngScanner.queryScanResult(barcode: "own_vc_1234567")
+        //print("Query Scan Result: \(result.result)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         Evrythng.initialize(delegate: self)
-        
+
+        EvrythngNetworkDispatcher.getUser { (user, error) in
+            guard let user = user else {
+                if let error = error {
+                    print(error)
+                } else {
+                    print("Unknown State")
+                }
+                return
+            }
+            print("Test: \(user.numberOfFriends)")
+        }
         /*
-        let provider = Ev<MyService>()
+        let provider = MoyaProvid
         provider.request(.createUser(firstName: "James", lastName: "Potter")) { result in
             // do something with the result (read on for more details)
         }
