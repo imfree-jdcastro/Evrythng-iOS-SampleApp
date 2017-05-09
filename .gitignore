@@ -68,3 +68,155 @@ Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcshareddata/Evrythng-iOS-S
 Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
 Evrythng-iOS-SampleApp.xcworkspace/contents.xcworkspacedata
 Evrythng-iOS-SampleApp.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/AlamofireObjectMapper/LICENSE
+Pods/AlamofireObjectMapper/README.md
+Pods/AlamofireObjectMapper/AlamofireObjectMapper/AlamofireObjectMapper.swift
+Pods/EvrythngiOS/Evrythng-iOS/EvrythngNetworkDispatcher.swift
+Pods/EvrythngiOS/Evrythng-iOS/JSON.swift
+Pods/Moya/License.md
+Pods/Moya/Readme.md
+Pods/Moya-SwiftyJSONMapper/LICENSE
+Pods/Moya-SwiftyJSONMapper/README.md
+Pods/Moya-SwiftyJSONMapper/Source/ALSwiftyJSONAble.swift
+Pods/Moya-SwiftyJSONMapper/Source/Response+SwiftyJSONMapper.swift
+Pods/Moya/Sources/Moya/Cancellable.swift
+Pods/Moya/Sources/Moya/Endpoint.swift
+Pods/Moya/Sources/Moya/Image.swift
+Pods/Moya/Sources/Moya/Moya+Alamofire.swift
+Pods/Moya/Sources/Moya/MoyaAvailability.swift
+Pods/Moya/Sources/Moya/MoyaError.swift
+Pods/Moya/Sources/Moya/MoyaProvider+Defaults.swift
+Pods/Moya/Sources/Moya/MoyaProvider+Internal.swift
+Pods/Moya/Sources/Moya/MoyaProvider.swift
+Pods/Moya/Sources/Moya/MultipartFormData.swift
+Pods/Moya/Sources/Moya/MultiTarget.swift
+Pods/Moya/Sources/Moya/Plugin.swift
+Pods/Moya/Sources/Moya/Response.swift
+Pods/Moya/Sources/Moya/TargetType.swift
+Pods/Moya/Sources/Moya/Plugins/AccessTokenPlugin.swift
+Pods/Moya/Sources/Moya/Plugins/CredentialsPlugin.swift
+Pods/Moya/Sources/Moya/Plugins/NetworkActivityPlugin.swift
+Pods/Moya/Sources/Moya/Plugins/NetworkLoggerPlugin.swift
+Pods/MoyaSugar/LICENSE
+Pods/MoyaSugar/README.md
+Pods/MoyaSugar/Sources/MoyaSugarProvider.swift
+Pods/MoyaSugar/Sources/Parameters.swift
+Pods/MoyaSugar/Sources/Route.swift
+Pods/MoyaSugar/Sources/SugarTargetType.swift
+Pods/ObjectMapper/LICENSE
+Pods/ObjectMapper/README-CN.md
+Pods/ObjectMapper/Sources/CustomDateFormatTransform.swift
+Pods/ObjectMapper/Sources/DataTransform.swift
+Pods/ObjectMapper/Sources/DateFormatterTransform.swift
+Pods/ObjectMapper/Sources/DateTransform.swift
+Pods/ObjectMapper/Sources/DictionaryTransform.swift
+Pods/ObjectMapper/Sources/EnumOperators.swift
+Pods/ObjectMapper/Sources/EnumTransform.swift
+Pods/ObjectMapper/Sources/FromJSON.swift
+Pods/ObjectMapper/Sources/HexColorTransform.swift
+Pods/ObjectMapper/Sources/ImmutableMappable.swift
+Pods/ObjectMapper/Sources/IntegerOperators.swift
+Pods/ObjectMapper/Sources/ISO8601DateTransform.swift
+Pods/ObjectMapper/Sources/Map.swift
+Pods/ObjectMapper/Sources/MapError.swift
+Pods/ObjectMapper/Sources/Mappable.swift
+Pods/ObjectMapper/Sources/Mapper.swift
+Pods/ObjectMapper/Sources/NSDecimalNumberTransform.swift
+Pods/ObjectMapper/Sources/Operators.swift
+Pods/ObjectMapper/Sources/ToJSON.swift
+Pods/ObjectMapper/Sources/TransformOf.swift
+Pods/ObjectMapper/Sources/TransformOperators.swift
+Pods/ObjectMapper/Sources/TransformType.swift
+Pods/ObjectMapper/Sources/URLTransform.swift
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Alamofire.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/AlamofireObjectMapper.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Moya-SwiftyJSONMapper.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Moya.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/MoyaSugar.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/ObjectMapper.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Result.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/SwiftEventBus.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/SwiftyJSON.xcscheme
+Pods/Result/LICENSE
+Pods/Result/README.md
+Pods/Result/Result/Result.swift
+Pods/Result/Result/ResultProtocol.swift
+Pods/SwiftEventBus/LICENSE
+Pods/SwiftEventBus/README.md
+Pods/SwiftEventBus/SwiftEventBus/SwiftEventBus.swift
+Pods/SwiftyJSON/LICENSE
+Pods/SwiftyJSON/README.md
+Pods/SwiftyJSON/Source/SwiftyJSON.swift
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/Alamofire/Info.plist
+Pods/Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper-dummy.m
+Pods/Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper-prefix.pch
+Pods/Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper-umbrella.h
+Pods/Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper.modulemap
+Pods/Target Support Files/AlamofireObjectMapper/AlamofireObjectMapper.xcconfig
+Pods/Target Support Files/AlamofireObjectMapper/Info.plist
+Pods/Target Support Files/Moya/Info.plist
+Pods/Target Support Files/Moya/Moya-dummy.m
+Pods/Target Support Files/Moya/Moya-prefix.pch
+Pods/Target Support Files/Moya/Moya-umbrella.h
+Pods/Target Support Files/Moya/Moya.modulemap
+Pods/Target Support Files/Moya/Moya.xcconfig
+Pods/Target Support Files/Moya-SwiftyJSONMapper/Info.plist
+Pods/Target Support Files/Moya-SwiftyJSONMapper/Moya-SwiftyJSONMapper-dummy.m
+Pods/Target Support Files/Moya-SwiftyJSONMapper/Moya-SwiftyJSONMapper-prefix.pch
+Pods/Target Support Files/Moya-SwiftyJSONMapper/Moya-SwiftyJSONMapper-umbrella.h
+Pods/Target Support Files/Moya-SwiftyJSONMapper/Moya-SwiftyJSONMapper.modulemap
+Pods/Target Support Files/Moya-SwiftyJSONMapper/Moya-SwiftyJSONMapper.xcconfig
+Pods/Target Support Files/MoyaSugar/Info.plist
+Pods/Target Support Files/MoyaSugar/MoyaSugar-dummy.m
+Pods/Target Support Files/MoyaSugar/MoyaSugar-prefix.pch
+Pods/Target Support Files/MoyaSugar/MoyaSugar-umbrella.h
+Pods/Target Support Files/MoyaSugar/MoyaSugar.modulemap
+Pods/Target Support Files/MoyaSugar/MoyaSugar.xcconfig
+Pods/Target Support Files/ObjectMapper/Info.plist
+Pods/Target Support Files/ObjectMapper/ObjectMapper-dummy.m
+Pods/Target Support Files/ObjectMapper/ObjectMapper-prefix.pch
+Pods/Target Support Files/ObjectMapper/ObjectMapper-umbrella.h
+Pods/Target Support Files/ObjectMapper/ObjectMapper.modulemap
+Pods/Target Support Files/ObjectMapper/ObjectMapper.xcconfig
+Pods/Target Support Files/Result/Info.plist
+Pods/Target Support Files/Result/Result-dummy.m
+Pods/Target Support Files/Result/Result-prefix.pch
+Pods/Target Support Files/Result/Result-umbrella.h
+Pods/Target Support Files/Result/Result.modulemap
+Pods/Target Support Files/Result/Result.xcconfig
+Pods/Target Support Files/SwiftEventBus/Info.plist
+Pods/Target Support Files/SwiftEventBus/SwiftEventBus-dummy.m
+Pods/Target Support Files/SwiftEventBus/SwiftEventBus-prefix.pch
+Pods/Target Support Files/SwiftEventBus/SwiftEventBus-umbrella.h
+Pods/Target Support Files/SwiftEventBus/SwiftEventBus.modulemap
+Pods/Target Support Files/SwiftEventBus/SwiftEventBus.xcconfig
+Pods/Target Support Files/SwiftyJSON/Info.plist
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-dummy.m
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.modulemap
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig
