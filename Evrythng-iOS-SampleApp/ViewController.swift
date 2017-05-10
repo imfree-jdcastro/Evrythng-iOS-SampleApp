@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                 }
                 return
             }
-            print("Test: \(user.numberOfFriends)")
+            print("Test: \(user.birthday)")
         }
         /*
         let provider = MoyaProvid
