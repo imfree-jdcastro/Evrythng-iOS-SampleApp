@@ -17,15 +17,37 @@ class ViewController: UIViewController {
     @IBAction func actionScan(_ sender: UIButton) {
         let evrythngScanner = EvrythngScanner.init(presentingVC: self)
         evrythngScanner.scanBarcode()
-        //let result = evrythngScanner.queryScanResult(barcode: "own_vc_1234567")
+        //let result = evrythngScanner.identify(barcode: "own_vc_1234567")
         //print("Query Scan Result: \(result.result)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         Evrythng.initialize(delegate: self)
 
+        if let user = User(jsonData: ["firstName": "Mymymy", "lastName": "lastlastlast", "email": "test@email.com", "password": "testpassword"]) {
+            
+            EvrythngUserCreator(user: user).execute(completionHandler: { (user, err) in
+                if(err != nil) {
+                    print("Error: \(err!)")
+                } else {
+                    print("Created User: \(user)")
+                    
+//                    if let userIdToDelete = user?.id {
+//                        print("Deleting User: \(userIdToDelete)")
+//                        let op = EvrythngOperator(operatorApiKey: "")
+//                        op.deleteUser(userId: userIdToDelete).execute(completionHandler: { (err) in
+//                            print("Successfully Deleted User: \(userIdToDelete)")
+//                        })
+//                    } else {
+//                        print("Unable to delete user since userId is nil")
+//                    }
+                }
+            })
+        }
+        
+        /*
         EvrythngNetworkDispatcher.getUser { (user, error) in
             guard let user = user else {
                 if let error = error {
@@ -35,19 +57,16 @@ class ViewController: UIViewController {
                 }
                 return
             }
-            print("Test: \(user.birthday)")
-        }
-        /*
-        let provider = MoyaProvid
-        provider.request(.createUser(firstName: "James", lastName: "Potter")) { result in
-            // do something with the result (read on for more details)
+            
+            if let userStr = user.toJSONString() {
+                print("Test: \(userStr)")
+            }
         }
          */
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

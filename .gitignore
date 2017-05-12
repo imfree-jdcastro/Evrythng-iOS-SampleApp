@@ -220,3 +220,43 @@ Pods/Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch
 Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h
 Pods/Target Support Files/SwiftyJSON/SwiftyJSON.modulemap
 Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig
+Evrythng-iOS-SampleApp.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+Pods/Moya-ObjectMapper/LICENSE
+Pods/Moya-ObjectMapper/README.md
+Pods/Moya-ObjectMapper/Source/Response+ObjectMapper.swift
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Moya-ObjectMapper.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/Pods-EvrythngiOS.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/QRCodeReader.swift.xcscheme
+Pods/QRCodeReader.swift/LICENSE
+Pods/QRCodeReader.swift/README.md
+Pods/QRCodeReader.swift/Sources/QRCodeReader.swift
+Pods/QRCodeReader.swift/Sources/QRCodeReaderResult.swift
+Pods/QRCodeReader.swift/Sources/QRCodeReaderView.swift
+Pods/QRCodeReader.swift/Sources/QRCodeReaderViewContainer.swift
+Pods/QRCodeReader.swift/Sources/QRCodeReaderViewController.swift
+Pods/QRCodeReader.swift/Sources/QRCodeReaderViewControllerBuilder.swift
+Pods/QRCodeReader.swift/Sources/QRCodeReaderViewControllerDelegate.swift
+Pods/QRCodeReader.swift/Sources/ReaderOverlayView.swift
+Pods/QRCodeReader.swift/Sources/SwitchCameraButton.swift
+Pods/QRCodeReader.swift/Sources/ToggleTorchButton.swift
+Pods/Target Support Files/Moya-ObjectMapper/Info.plist
+Pods/Target Support Files/Moya-ObjectMapper/Moya-ObjectMapper-dummy.m
+Pods/Target Support Files/Moya-ObjectMapper/Moya-ObjectMapper-prefix.pch
+Pods/Target Support Files/Moya-ObjectMapper/Moya-ObjectMapper-umbrella.h
+Pods/Target Support Files/Moya-ObjectMapper/Moya-ObjectMapper.modulemap
+Pods/Target Support Files/Moya-ObjectMapper/Moya-ObjectMapper.xcconfig
+Pods/Target Support Files/Pods-EvrythngiOS/Info.plist
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS-acknowledgements.markdown
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS-acknowledgements.plist
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS-dummy.m
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS-resources.sh
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS-umbrella.h
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS.debug.xcconfig
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS.modulemap
+Pods/Target Support Files/Pods-EvrythngiOS/Pods-EvrythngiOS.release.xcconfig
+Pods/Target Support Files/QRCodeReader.swift/Info.plist
+Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift-dummy.m
+Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch
+Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift-umbrella.h
+Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap
+Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift.xcconfig
