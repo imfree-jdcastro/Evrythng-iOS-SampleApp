@@ -14,6 +14,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    static let SEGUE = "segueMainDashboard"
+    
     let apiManager = EvrythngApiManager()
     
     lazy var readerVC: QRCodeReaderViewController = {
@@ -73,44 +75,82 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Evrythng.initialize(delegate: self)
-        
-        /*
-        if let user = User(jsonData: ["firstName": "Mymymy", "lastName": "lastlastlast", "email": "test2@email.com", "password": "testpassword"]) {
+        self.createUser { (_) in
             
-            apiManager.authService.evrythngUserCreator(user: user).execute(completionHandler: { (user, err) in
-                if(err != nil) {
-                    print("Error: \(err!)")
-                    self.showAlertDialog(title: "Sorry", message: err!.localizedDescription)
-                } else {
-                    print("Created User: \(user?.jsonData?.rawString())")
-                    if let userIdToDelete = user?.id {
-                        print("Deleting User: \(userIdToDelete)")
-                        self.deleteUser(userId: userIdToDelete, completion: nil)
-                    } else {
-                        print("Unable to delete user since userId is nil")
+        }
+        //self.readThng(completion: nil)
+        /*self.createUser(completion: { [weak self] (user) in
+            self.readThng()
+        })*/
+    }
+    
+    func readThng(completion: ((Thng?)->Void)?) {
+        apiManager.thngService.thngReader(thngId: "U3cVQqSdBgswt5waaYsGxepg").execute(completionHandler: { (thng, err) in
+            
+            if(err != nil) {
+                print("Error: \(err!.localizedDescription)")
+                let alertTitle = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+                
+                if case EvrythngNetworkError.ResponseError(let errorResponse) = err! {
+                    var errorMessage = ""
+                    if let errorList = errorResponse.errors {
+                        errorMessage = errorList.joined(separator: ", ")
                     }
+                    self.showAlertDialog(title: alertTitle, message: errorMessage)
+                } else {
+                    self.showAlertDialog(title: alertTitle, message: err!.localizedDescription)
+                }
+                
+            } else {
+                if let rawString = thng?.jsonData?.rawString() {
+                    print("Get Thng Response: \(rawString)")
+                }
+                completion?(thng)
+            }
+        })
+    }
+    
+    func createUser(_ completion: ((Credentials?)->Void)?) {
+        
+        //if let user = User(jsonData: ["firstName": "Mymymy", "lastName": "lastlastlast", "email": "test2@email.com", "password": "testpassword"]) {
+        let user = User(userBuilder: {
+            $0.firstName = "Mymymy"
+            $0.lastName = "lastlastlast"
+            $0.email = "test2@email.com"
+            $0.password = "testpassword"
+            })
+            apiManager.authService.evrythngUserCreator(user: user).execute(completionHandler: { (credentials, err) in
+                if(err != nil) {
+                    print("Error: \(err!.localizedDescription)")
+                    let alertTitle = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+                    
+                    if case EvrythngNetworkError.ResponseError(let errorResponse) = err! {
+                        var errorMessage = ""
+                        if let errorList = errorResponse.errors {
+                            errorMessage = errorList.joined(separator: ", ")
+                        }
+                        self.showAlertDialog(title: alertTitle, message: errorMessage)
+                    } else {
+                        self.showAlertDialog(title: alertTitle, message: err!.localizedDescription)
+                    }
+                    
+                } else {
+                    if let createdCredentialsStringResp = credentials?.jsonData?.rawString() {
+                        print("Created Credentials: \(createdCredentialsStringResp)")
+                    }
+                    completion?(credentials)
+                    /*
+                     if let userIdToDelete = user?.id {
+                     print("Deleting User: \(userIdToDelete)")
+                     self.deleteUser(userId: userIdToDelete, completion: nil)
+                     } else {
+                     print("Unable to delete user since userId is nil")
+                     }
+                     */
                 }
             })
+        //}
  
-        }
-         */
-        /*
-        EvrythngNetworkDispatcher.getUser { (user, error) in
-            guard let user = user else {
-                if let error = error {
-                    print(error)
-                } else {
-                    print("Unknown State")
-                }
-                return
-            }
-            
-            if let userStr = user.toJSONString() {
-                print("Test: \(userStr)")
-            }
-        }
-         */
     }
 
     override func didReceiveMemoryWarning() {
@@ -141,25 +181,14 @@ extension ViewController {
 
 // MARK: EvrythngDelegate
 
-extension ViewController: EvrythngDelegate {
-    
-    func evrythngInitializationDidSucceed() {
-        print("Evrythng Initialization Succeeded")
-    }
-    
-    func evrythngInitializationDidFail() {
-        print("Evrythng Initialization Failed")
-    }
-}
-
 extension ViewController: EvrythngScannerResultDelegate {
     public func didFinishScanResult(result: String, error: Swift.Error?) {
         if let err = error {
-            print("Default Scan Result Error: \(err.localizedDescription)")
+            print("Scan Result Error: \(err.localizedDescription)")
             self.showAlertDialog(title: "Sorry", message: "Scan Error: \(err.localizedDescription)")
             return
         } else {
-            print("Default Scan Result Successful: \(result)")
+            print("Scan Result Successful: \(result)")
             self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(result)")
         }
     }

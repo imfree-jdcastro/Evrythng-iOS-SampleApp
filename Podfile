@@ -38,9 +38,11 @@ target 'EvrythngiOS' do
     pod 'Moya', '~> 8.0.3'
     pod 'MoyaSugar', '~> 0.4'
     pod 'Moya-SwiftyJSONMapper', '~> 2.2'
-    pod 'Moya-ObjectMapper' '~> 2.3.1'
+    pod 'Moya-ObjectMapper', '~> 2.3.1'
     pod 'SwiftyJSON', '~> 3.1'
     pod 'SwiftEventBus', '~> 2.1'
     pod 'QRCodeReader.swift', '~> 7.4.1'
+    #pod 'ZXingObjC', '~> 3.2.1'
+    #pod 'GoogleMobileVision/BarcodeDetector'
 
   end

@@ -32,7 +32,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireObjectMapper (~> 4.1)
   - Moya (~> 8.0.3)
-  - Moya-ObjectMapper
+  - Moya-ObjectMapper (~> 2.3.1)
   - Moya-SwiftyJSONMapper (~> 2.2)
   - MoyaSugar (~> 0.4)
   - QRCodeReader.swift (~> 7.4.1)
@@ -52,6 +52,6 @@ SPEC CHECKSUMS:
   SwiftEventBus: 9e8f6d8cff2826d66536ec367d17a47299478aa0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c13574d310768e5e1287b50cb0fa645b0f7b0feb
+PODFILE CHECKSUM: 20a632cba0d4d2618cc65839c1053459925d9341
 
 COCOAPODS: 1.2.1
