@@ -260,3 +260,18 @@ Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch
 Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift-umbrella.h
 Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap
 Pods/Target Support Files/QRCodeReader.swift/QRCodeReader.swift.xcconfig
+Pods/KRProgressHUD/LICENSE
+Pods/KRProgressHUD/README.md
+Pods/KRProgressHUD/KRProgressHUD/Classes/KRProgressHUD.swift
+Pods/KRProgressHUD/KRProgressHUD/Classes/KRProgressHUDExtensions.swift
+Pods/KRProgressHUD/KRProgressHUD/Classes/KRProgressHUDIconType.swift
+Pods/KRProgressHUD/KRProgressHUD/Classes/KRProgressHUDViewController.swift
+Pods/KRProgressHUD/KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorView.swift
+Pods/KRProgressHUD/KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorViewStyle.swift
+Pods/Pods.xcodeproj/xcuserdata/imfree.jdcastro.xcuserdatad/xcschemes/KRProgressHUD.xcscheme
+Pods/Target Support Files/KRProgressHUD/Info.plist
+Pods/Target Support Files/KRProgressHUD/KRProgressHUD-dummy.m
+Pods/Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch
+Pods/Target Support Files/KRProgressHUD/KRProgressHUD-umbrella.h
+Pods/Target Support Files/KRProgressHUD/KRProgressHUD.modulemap
+Pods/Target Support Files/KRProgressHUD/KRProgressHUD.xcconfig
