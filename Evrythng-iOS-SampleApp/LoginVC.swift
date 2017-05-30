@@ -17,22 +17,25 @@ class LoginVC: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var tfUsername: UITextField!
+    @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
     // MARK: IBActions
     
     @IBAction func actionLogin(_ sender: UIButton) {
         
-        let email = tfUsername.text!
+        let email = tfEmail.text!
         let password = tfPassword.text!
         
-        KRProgressHUD.show()
-        
-        self.authenticateUser(email: email, password: password) { (credentials, err) in
-            
-            KRProgressHUD.dismiss()
-            self.handleCredentialsResponse(credentials: credentials, err: err)
+        if(StringUtils.isStringEmpty(string: email) && StringUtils.isStringEmpty(string: password)) {
+            let err = NSError(domain:"Invalid Email / Password", code:999, userInfo:["Test":"Abc"])
+            self.showErrorAlertDialog(err: err)
+        } else {
+            KRProgressHUD.show()
+            self.authenticateUser(email: email, password: password) { (credentials, err) in
+                KRProgressHUD.dismiss()
+                self.handleCredentialsResponse(credentials: credentials, err: err)
+            }
         }
     }
     
@@ -41,9 +44,7 @@ class LoginVC: UIViewController {
         let newUser = User(jsonData: ["firstName": "Mymymy", "lastName": "lastlastlast", "email": "test2@email.com", "password": "testpassword"])!
         
         KRProgressHUD.show()
-        
         self.createUser(user: nil) { (credentials, err) in
-            
             KRProgressHUD.dismiss()
             self.handleCredentialsResponse(credentials: credentials, err: err)
         }
@@ -140,6 +141,9 @@ extension LoginVC {
             var errorMessage = ""
             if let errorList = errorResponse.errors {
                 errorMessage = errorList.joined(separator: ", ")
+            }
+            if let errorCode = errorResponse.responseStatusCode {
+                errorMessage += " [Code: \(errorCode)]"
             }
             self.showAlertDialog(title: alertTitle, message: errorMessage)
         } else {

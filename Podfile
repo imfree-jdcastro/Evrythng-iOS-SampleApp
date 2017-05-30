@@ -13,6 +13,7 @@ target 'Evrythng-iOS-SampleApp' do
   #pod 'EvrythngiOS', :git => 'https://github.com/imfree-jdcastro/Evrythng-iOS-SDK.git', :tag => '0.0.211'
   #pod 'EvrythngiOS', :path => '~/Desktop/Development/XcodeProjects/EvrythngiOS/EvrythngiOS.podspec'
   pod "KRProgressHUD"
+  pod "Kingfisher"
 
   target 'Evrythng-iOS-SampleAppTests' do
     inherit! :search_paths

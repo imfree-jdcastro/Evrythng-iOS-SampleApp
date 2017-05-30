@@ -72,7 +72,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="-NA-" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d7T-ET-Fvg">
@@ -97,6 +97,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome!" id="Bxg-m9-Vxl"/>
+                    <connections>
+                        <outlet property="ivReference" destination="Qgz-aQ-vNg" id="X38-LI-Pl7"/>
+                        <outlet property="tvDetails" destination="d7T-ET-Fvg" id="vv1-oo-y8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,19 +235,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BLu-4s-DSf">
-                                <rect key="frame" x="8" y="226.5" width="359" height="214"/>
+                                <rect key="frame" x="8" y="196.5" width="359" height="214"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcB-W8-sFu">
                                         <rect key="frame" x="8" y="0.0" width="343" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24z-4p-FIT">
-                                                <rect key="frame" x="98.5" y="5" width="232.5" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="24z-4p-FIT" userLabel="Tf Email">
+                                                <rect key="frame" x="94" y="5" width="237" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-Zw-tUz">
-                                                <rect key="frame" x="12" y="10.5" width="74.5" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-Zw-tUz">
+                                                <rect key="frame" x="12" y="11" width="70" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -262,14 +266,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-S5-sqe">
                                         <rect key="frame" x="8" y="58" width="343" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nph-BC-JJe">
-                                                <rect key="frame" x="98.5" y="5" width="232.5" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nph-BC-JJe">
+                                                <rect key="frame" x="94" y="5" width="237" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-mG-aoo">
-                                                <rect key="frame" x="12" y="10.5" width="74.5" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-mG-aoo">
+                                                <rect key="frame" x="12" y="10.5" width="70" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -285,11 +289,10 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4d-8S-LQ7">
-                                        <rect key="frame" x="54.5" y="116" width="250" height="40"/>
+                                        <rect key="frame" x="90" y="116" width="179" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.59258884089999997" blue="0.23558104390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="SaS-gf-gkD"/>
-                                            <constraint firstAttribute="width" constant="250" id="yOG-jn-KmQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <state key="normal" title="LOGIN"/>
@@ -303,7 +306,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wca-wH-4Ng">
-                                        <rect key="frame" x="54.5" y="174" width="250" height="40"/>
+                                        <rect key="frame" x="90" y="174" width="179" height="40"/>
                                         <state key="normal" title="Login as Anonymous User"/>
                                         <connections>
                                             <action selector="actionLoginAnonymous:" destination="AES-xI-2Ua" eventType="touchUpInside" id="yy0-Xd-vVB"/>
@@ -326,15 +329,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BLu-4s-DSf" firstAttribute="centerY" secondItem="6b8-tj-sVj" secondAttribute="centerY" id="08P-tO-yJ3"/>
+                            <constraint firstItem="BLu-4s-DSf" firstAttribute="centerY" secondItem="6b8-tj-sVj" secondAttribute="centerY" constant="-30" id="08P-tO-yJ3"/>
                             <constraint firstAttribute="trailing" secondItem="BLu-4s-DSf" secondAttribute="trailing" constant="8" id="Ofk-f6-63B"/>
                             <constraint firstItem="BLu-4s-DSf" firstAttribute="leading" secondItem="6b8-tj-sVj" secondAttribute="leading" constant="8" id="W0D-yW-Epj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Harness App EVT iOS SDK" id="Q5D-or-KRC"/>
                     <connections>
+                        <outlet property="tfEmail" destination="24z-4p-FIT" id="gOt-ng-Swx"/>
                         <outlet property="tfPassword" destination="Nph-BC-JJe" id="1FO-fp-i2o"/>
-                        <outlet property="tfUsername" destination="24z-4p-FIT" id="veb-3E-bls"/>
                         <segue destination="Hbo-Yl-KgM" kind="show" identifier="segueMainDashboard" id="6qs-Bk-yro"/>
                     </connections>
                 </viewController>

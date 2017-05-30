@@ -10,12 +10,18 @@ import UIKit
 import EvrythngiOS
 import Moya
 import AVFoundation
+import Kingfisher
 
 class ViewController: UIViewController {
 
     static let SEGUE = "segueScan"
     
     public var credentials: Credentials?
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var ivReference: UIImageView!
+    @IBOutlet weak var tvDetails: UITextView!
     
     // MARK: - IBActions
     
@@ -95,14 +101,33 @@ extension ViewController {
 // MARK: EvrythngDelegate
 
 extension ViewController: EvrythngScannerResultDelegate {
-    public func didFinishScanResult(result: String, error: Swift.Error?) {
+    //public func didFinishScanResult(result: String, error: Swift.Error?) {
+    public func evrythngScannerDidFinishScan(scanIdentificationsResponse: EvrythngScanIdentificationsResponse?, value: String, error: Swift.Error?) {
+        
         if let err = error {
+            
             print("Scan Result Error: \(err.localizedDescription)")
             self.showAlertDialog(title: "Sorry", message: "Scan Error: \(err.localizedDescription)")
             return
+            
+        } else if let scanResponse = scanIdentificationsResponse {
+            
+            if let results = scanResponse.results, results.count > 0 {
+                print("Scan Result Successful: \(value)")
+                self.showAlertDialog(title: "Congratulations", message: "Thng/Product Identified: \(value)")
+                
+                if let imageStr = scanResponse.results?.first?.thng?.identifiers?["image"] {
+                    print("Image Str: \(imageStr)")
+                    let url = URL(string: imageStr)
+                    self.ivReference.kf.setImage(with: url)
+                }
+            } else {
+                self.showAlertDialog(title: "Sorry", message: "No Thng/Product Identified.")
+            }
+            self.tvDetails.text = scanResponse.jsonData?.rawString()!
+            
         } else {
-            print("Scan Result Successful: \(result)")
-            self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(result)")
+            self.showAlertDialog(title: "Oops", message: "An unknown error occurred")
         }
     }
 }
