@@ -305,3 +305,15 @@ Pods/Target Support Files/Kingfisher/Kingfisher-prefix.pch
 Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h
 Pods/Target Support Files/Kingfisher/Kingfisher.modulemap
 Pods/Target Support Files/Kingfisher/Kingfisher.xcconfig
+Pods/GoogleInterchangeUtilities/Frameworks/frameworks/GoogleInterchangeUtilities.framework/GoogleInterchangeUtilities
+Pods/GoogleMobileVision/BarcodeDetector/Frameworks/frameworks/BarcodeDetector.framework/BarcodeDetector
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/GoogleMobileVision
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/Headers/GMVDetector.h
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/Headers/GMVDetectorConstants.h
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/Headers/GMVFeature.h
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/Headers/GMVUtility.h
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/Headers/GoogleMobileVision.h
+Pods/GoogleMobileVision/Detector/Frameworks/frameworks/GoogleMobileVision.framework/Modules/module.modulemap
+Pods/GoogleNetworkingUtilities/Frameworks/frameworks/GoogleNetworkingUtilities.framework/GoogleNetworkingUtilities
+Pods/GoogleSymbolUtilities/Frameworks/frameworks/GoogleSymbolUtilities.framework/GoogleSymbolUtilities
+Pods/GoogleUtilities/Frameworks/frameworks/GoogleUtilities.framework/GoogleUtilities

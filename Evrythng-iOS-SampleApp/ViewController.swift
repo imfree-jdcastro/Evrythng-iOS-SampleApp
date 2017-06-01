@@ -116,6 +116,7 @@ extension ViewController: EvrythngScannerResultDelegate {
                 print("Scan Result Successful: \(value)")
                 self.showAlertDialog(title: "Congratulations", message: "Thng/Product Identified: \(value)")
                 
+                //Custom Identifier "image"
                 if let imageStr = scanResponse.results?.first?.thng?.identifiers?["image"] {
                     print("Image Str: \(imageStr)")
                     let url = URL(string: imageStr)
