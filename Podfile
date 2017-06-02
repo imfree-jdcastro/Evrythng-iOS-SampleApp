@@ -14,7 +14,7 @@ target 'Evrythng-iOS-SampleApp' do
   #pod 'EvrythngiOS', :path => '~/Desktop/Development/XcodeProjects/EvrythngiOS/EvrythngiOS.podspec'
   #pod 'Kingfisher', '~> 3.7.2'
   #pod 'Moya', '~> 8.0.3'
-  pod 'KRProgressHUD'
+  #pod 'KRProgressHUD'
 
   target 'Evrythng-iOS-SampleAppTests' do
     inherit! :search_paths
@@ -43,7 +43,7 @@ target 'EvrythngiOS' do
     pod 'Moya-SwiftyJSONMapper', '~> 2.2'
     pod 'Moya-ObjectMapper', '~> 2.3.1'
     pod 'SwiftyJSON', '~> 3.1'
-    #pod 'KRProgressHUD'
+    pod 'KRProgressHUD'
     pod 'GoogleMobileVision/BarcodeDetector'
 
   end
