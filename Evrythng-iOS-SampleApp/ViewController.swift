@@ -9,65 +9,25 @@
 import UIKit
 import EvrythngiOS
 import Moya
-import QRCodeReader
 import AVFoundation
+import Kingfisher
 
 class ViewController: UIViewController {
 
-    static let SEGUE = "segueMainDashboard"
+    static let SEGUE = "segueScan"
     
-    let apiManager = EvrythngApiManager()
+    public var credentials: Credentials?
     
-    lazy var readerVC: QRCodeReaderViewController = {
-        let builder = QRCodeReaderViewControllerBuilder {
-            $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode], captureDevicePosition: .back)
-        }
-        
-        return QRCodeReaderViewController(builder: builder)
-    }()
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var ivReference: UIImageView!
+    @IBOutlet weak var tvDetails: UITextView!
     
     // MARK: - IBActions
     
     @IBAction func actionScan(_ sender: UIButton) {
-        
         let evrythngScanner = EvrythngScanner.init(presentedBy: self, withResultDelegate: self)
         evrythngScanner.scanBarcode()
-        
-        /*
-        if(QRCodeReader.isAvailable()) {
-            do {
-                let isSupported = try QRCodeReader.supportsMetadataObjectTypes()
-                if(isSupported) {
-                    // Retrieve the QRCode content
-                    // By using the delegate pattern
-                    readerVC.delegate = self
-                    
-                    // Or by using the closure pattern
-                    /*
-                    readerVC.completionBlock = { (result: QRCodeReaderResult?) in
-                        print(result)
-                    }
-                    */
-                    
-                    // Presents the readerVC as modal form sheet
-                    readerVC.modalPresentationStyle = .formSheet
-                    self.present(readerVC, animated: true, completion: nil)
-                    
-                    //        let evrythngScanner = EvrythngScanner.init(presentedBy: self, withResultDelegate: self)
-                    //        evrythngScanner.scanBarcode()
-                    //let result = evrythngScanner.identify(barcode: "own_vc_1234567")
-                    //print("Query Scan Result: \(result.result)")
-
-                }
-            } catch {
-                print("Device does not support MetadataObjectTypes")
-                self.showAlertDialog(title: "Sorry", message: "Your device does not support AVMetadataObjectTypes for Scanning")
-            }
-        } else {
-            print("QRCodeCodeReader is not available")
-            self.showAlertDialog(title: "Sorry", message: "Your device does not support QRCodeReader for Scanning")
-        }
-         */
     }
     
     // MARK: ViewController Lifecycle
@@ -75,9 +35,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.createUser { (_) in
-            
-        }
         //self.readThng(completion: nil)
         /*self.createUser(completion: { [weak self] (user) in
             self.readThng()
@@ -85,41 +42,11 @@ class ViewController: UIViewController {
     }
     
     func readThng(completion: ((Thng?)->Void)?) {
-        apiManager.thngService.thngReader(thngId: "U3cVQqSdBgswt5waaYsGxepg").execute(completionHandler: { (thng, err) in
+        if let credentials = self.credentials, let apiKey = credentials.evrythngApiKey {
             
-            if(err != nil) {
-                print("Error: \(err!.localizedDescription)")
-                let alertTitle = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+            let apiManager = EvrythngApiManager(apiKey: apiKey)
+            apiManager.thngService.thngReader(thngId: "U3cVQqSdBgswt5waaYsGxepg").execute(completionHandler: { (thng, err) in
                 
-                if case EvrythngNetworkError.ResponseError(let errorResponse) = err! {
-                    var errorMessage = ""
-                    if let errorList = errorResponse.errors {
-                        errorMessage = errorList.joined(separator: ", ")
-                    }
-                    self.showAlertDialog(title: alertTitle, message: errorMessage)
-                } else {
-                    self.showAlertDialog(title: alertTitle, message: err!.localizedDescription)
-                }
-                
-            } else {
-                if let rawString = thng?.jsonData?.rawString() {
-                    print("Get Thng Response: \(rawString)")
-                }
-                completion?(thng)
-            }
-        })
-    }
-    
-    func createUser(_ completion: ((Credentials?)->Void)?) {
-        
-        //if let user = User(jsonData: ["firstName": "Mymymy", "lastName": "lastlastlast", "email": "test2@email.com", "password": "testpassword"]) {
-        let user = User(userBuilder: {
-            $0.firstName = "Mymymy"
-            $0.lastName = "lastlastlast"
-            $0.email = "test2@email.com"
-            $0.password = "testpassword"
-            })
-            apiManager.authService.evrythngUserCreator(user: user).execute(completionHandler: { (credentials, err) in
                 if(err != nil) {
                     print("Error: \(err!.localizedDescription)")
                     let alertTitle = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
@@ -135,22 +62,13 @@ class ViewController: UIViewController {
                     }
                     
                 } else {
-                    if let createdCredentialsStringResp = credentials?.jsonData?.rawString() {
-                        print("Created Credentials: \(createdCredentialsStringResp)")
+                    if let rawString = thng?.jsonData?.rawString() {
+                        print("Get Thng Response: \(rawString)")
                     }
-                    completion?(credentials)
-                    /*
-                     if let userIdToDelete = user?.id {
-                     print("Deleting User: \(userIdToDelete)")
-                     self.deleteUser(userId: userIdToDelete, completion: nil)
-                     } else {
-                     print("Unable to delete user since userId is nil")
-                     }
-                     */
+                    completion?(thng)
                 }
             })
-        //}
- 
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -163,6 +81,7 @@ class ViewController: UIViewController {
 extension ViewController {
     
     internal func deleteUser(userId: String, completion: (()->Void)?) {
+        let apiManager = EvrythngApiManager()
         let op = apiManager.authService.evrythngOperator(operatorApiKey: "hohzaKH7VbVp659Pnr5m3xg2DpKBivg9rFh6PttT5AnBtEn3s17B8OPAOpBjNTWdoRlosLTxJmUrpjTi")
         op.deleteUser(userId: userId).execute(completionHandler: { (err) in
             print("Successfully Deleted User: \(userId)")
@@ -182,40 +101,34 @@ extension ViewController {
 // MARK: EvrythngDelegate
 
 extension ViewController: EvrythngScannerResultDelegate {
-    public func didFinishScanResult(result: String, error: Swift.Error?) {
+    //public func didFinishScanResult(result: String, error: Swift.Error?) {
+    public func evrythngScannerDidFinishScan(scanIdentificationsResponse: EvrythngScanIdentificationsResponse?, value: String, error: Swift.Error?) {
+        
         if let err = error {
+            
             print("Scan Result Error: \(err.localizedDescription)")
             self.showAlertDialog(title: "Sorry", message: "Scan Error: \(err.localizedDescription)")
             return
+            
+        } else if let scanResponse = scanIdentificationsResponse {
+            
+            if let results = scanResponse.results, results.count > 0 {
+                print("Scan Result Successful: \(value)")
+                self.showAlertDialog(title: "Congratulations", message: "Thng/Product Identified: \(value)")
+                
+                //Custom Identifier "image"
+                if let imageStr = scanResponse.results?.first?.thng?.identifiers?["image"] {
+                    print("Image Str: \(imageStr)")
+                    let url = URL(string: imageStr)
+                    self.ivReference.kf.setImage(with: url)
+                }
+            } else {
+                self.showAlertDialog(title: "Sorry", message: "No Thng/Product Identified.")
+            }
+            self.tvDetails.text = scanResponse.jsonData?.rawString()!
+            
         } else {
-            print("Scan Result Successful: \(result)")
-            self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(result)")
+            self.showAlertDialog(title: "Oops", message: "An unknown error occurred")
         }
-    }
-}
-
-// MARK: - QRCodeReaderViewController Delegate Methods
-
-extension ViewController: QRCodeReaderViewControllerDelegate {
-    
-    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-        reader.stopScanning()
-        
-        let evrythngScanner = EvrythngScanner.init(presentedBy: self, withResultDelegate: self)
-        evrythngScanner.identify(barcode: result.value)
-        //dismiss(animated: true, completion: nil)
-    }
-    
-    //This is an optional delegate method, that allows you to be notified when the user switches the cameraName
-    //By pressing on the switch camera button
-    func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {
-        if let cameraName = newCaptureDevice.device.localizedName {
-            print("Switching capturing to: \(cameraName)")
-        }
-    }
-    
-    func readerDidCancel(_ reader: QRCodeReaderViewController) {
-        reader.stopScanning()
-        dismiss(animated: true, completion: nil)
     }
 }
