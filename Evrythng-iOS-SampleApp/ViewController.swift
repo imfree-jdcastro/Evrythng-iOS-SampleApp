@@ -10,7 +10,7 @@ import UIKit
 import EvrythngiOS
 import Moya
 import AVFoundation
-import Kingfisher
+//import Kingfisher
 
 class ViewController: UIViewController {
 
@@ -120,7 +120,7 @@ extension ViewController: EvrythngScannerResultDelegate {
                 if let imageStr = scanResponse.results?.first?.thng?.identifiers?["image"] {
                     print("Image Str: \(imageStr)")
                     let url = URL(string: imageStr)
-                    self.ivReference.kf.setImage(with: url)
+                    //self.ivReference.kf.setImage(with: url)
                 }
             } else {
                 self.showAlertDialog(title: "Sorry", message: "No Thng/Product Identified.")
