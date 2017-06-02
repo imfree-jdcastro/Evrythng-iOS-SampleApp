@@ -3,6 +3,20 @@ PODS:
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleMobileVision/BarcodeDetector (1.1.0):
+    - GoogleMobileVision/Detector
+  - GoogleMobileVision/Detector (1.1.0):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleUtilities (~> 1.3)
+  - GoogleNetworkingUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleUtilities (1.3.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - KRProgressHUD (2.2.2)
   - Moya (8.0.4):
     - Moya/Core (= 8.0.4)
   - Moya-ObjectMapper (2.3.1):
@@ -31,6 +45,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireObjectMapper (~> 4.1)
+  - GoogleMobileVision/BarcodeDetector
+  - KRProgressHUD
   - Moya (~> 8.0.3)
   - Moya-ObjectMapper (~> 2.3.1)
   - Moya-SwiftyJSONMapper (~> 2.2)
@@ -42,6 +58,12 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleMobileVision: d344d69c8987ee239c8a47257e2039084682d181
+  GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
+  KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
   Moya-ObjectMapper: 952be2b261d38cf8d973b7e429708eb03d256e23
   Moya-SwiftyJSONMapper: 03c9d3e562c9025c8c00fa3ec97ae1da61a2be37
@@ -52,6 +74,6 @@ SPEC CHECKSUMS:
   SwiftEventBus: 9e8f6d8cff2826d66536ec367d17a47299478aa0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 20a632cba0d4d2618cc65839c1053459925d9341
+PODFILE CHECKSUM: c4e7a320e753551e382350805cdbc7c95c5d1541
 
 COCOAPODS: 1.2.1

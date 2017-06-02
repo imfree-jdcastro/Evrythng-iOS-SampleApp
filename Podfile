@@ -27,7 +27,7 @@ end
 
 target 'EvrythngiOS' do
   workspace 'Evrythng-iOS-SampleApp.xcworkspace'
-  xcodeproj 'EvrythngiOS/EvrythngiOS.xcodeproj’
+  xcodeproj 'EvrythngiOS-SDK-Official/EvrythngiOS.xcodeproj’
 
    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
@@ -42,7 +42,7 @@ target 'EvrythngiOS' do
     pod 'SwiftyJSON', '~> 3.1'
     pod 'SwiftEventBus', '~> 2.1'
     pod 'QRCodeReader.swift', '~> 7.4.1'
-    #pod 'ZXingObjC', '~> 3.2.1'
-    #pod 'GoogleMobileVision/BarcodeDetector'
+    pod 'KRProgressHUD'
+    pod 'GoogleMobileVision/BarcodeDetector'
 
   end
