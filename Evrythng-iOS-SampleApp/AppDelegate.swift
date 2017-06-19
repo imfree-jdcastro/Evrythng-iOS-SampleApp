@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Evrythng-iOS-SampleApp
+//  TestProject
 //
-//  Created by JD Castro on 26/04/2017.
+//  Created by JD Castro on 09/06/2017.
 //  Copyright © 2017 ImFree. All rights reserved.
 //
 
@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Evrythng.initialize(delegate: self)
+        
+        Evrythng.initialize(delegate: nil)
+        
         return true
     }
 
@@ -45,13 +47,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: EvrythngDelegate {
-    
-    func evrythngInitializationDidSucceed() {
-        print("Evrythng Initialization Succeeded")
-    }
-    
-    func evrythngInitializationDidFail() {
-        print("Evrythng Initialization Failed")
-    }
-}

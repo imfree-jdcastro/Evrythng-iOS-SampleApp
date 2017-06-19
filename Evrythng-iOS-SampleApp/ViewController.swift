@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Evrythng-iOS-SampleApp
+//  TestProject
 //
-//  Created by JD Castro on 26/04/2017.
+//  Created by JD Castro on 09/06/2017.
 //  Copyright © 2017 ImFree. All rights reserved.
 //
 
@@ -10,10 +10,9 @@ import UIKit
 import EvrythngiOS
 import Moya
 import AVFoundation
-//import Kingfisher
 
 class ViewController: UIViewController {
-
+    
     static let SEGUE = "segueScan"
     
     public var credentials: Credentials?
@@ -37,8 +36,8 @@ class ViewController: UIViewController {
         
         //self.readThng(completion: nil)
         /*self.createUser(completion: { [weak self] (user) in
-            self.readThng()
-        })*/
+         self.readThng()
+         })*/
     }
     
     func readThng(completion: ((Thng?)->Void)?) {
@@ -70,7 +69,7 @@ class ViewController: UIViewController {
             })
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -114,12 +113,19 @@ extension ViewController: EvrythngScannerResultDelegate {
             
             if let results = scanResponse.results, results.count > 0 {
                 print("Scan Result Successful: \(value)")
-                self.showAlertDialog(title: "Congratulations", message: "Thng/Product Identified: \(value)")
+                
+                if let thng = scanResponse.results?.first?.thng {
+                    self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(thng)")
+                } else if scanResponse.results?.first?.product != nil {
+                    self.showAlertDialog(title: "Congratulations", message: "Product Identified: \(value)")
+                } else {
+                    self.showAlertDialog(title: "Congratulations", message: "Unknown Type Identified: \(value)")
+                }
                 
                 //Custom Identifier "image"
                 if let imageStr = scanResponse.results?.first?.thng?.identifiers?["image"] {
                     print("Image Str: \(imageStr)")
-                    let url = URL(string: imageStr)
+                    //let url = URL(string: imageStr)
                     //self.ivReference.kf.setImage(with: url)
                 }
             } else {

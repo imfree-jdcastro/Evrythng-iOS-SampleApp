@@ -30,7 +30,7 @@ end
 
 target 'EvrythngiOS' do
   workspace 'Evrythng-iOS-SampleApp.xcworkspace'
-  xcodeproj 'EvrythngiOS-SDK-Official/EvrythngiOS.xcodeproj’
+  project 'EvrythngiOS-SDK-Official/EvrythngiOS.xcodeproj’
 
    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!

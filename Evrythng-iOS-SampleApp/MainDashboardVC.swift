@@ -71,7 +71,7 @@ class MainDashboardVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 
                 alertDialog.addAction(UIAlertAction.init(title: "Yes", style: .default, handler: { (action) in
                     alertDialog.dismiss(animated: true, completion: nil)
-                    print("UserID: \(credentials.evrythngUser) Activation Code: \(credentials.activationCode)")
+                    print("UserID: \(String(describing: credentials.evrythngUser)) Activation Code: \(String(describing: credentials.activationCode))")
                     self.validateUser(userId: credentials.evrythngUser!, activationCode: credentials.activationCode!, completion: { (creds, err) in
                         self.handleUserValidationResponse(credentials: creds, err: err)
                     })
@@ -166,7 +166,8 @@ class MainDashboardVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             switch(identifier) {
-                case ViewController.SEGUE:
+                //case ViewController.SEGUE:
+                case "abc":
                     if let viewController = segue.destination as? ViewController {
                         viewController.credentials = self.credentials
                     }

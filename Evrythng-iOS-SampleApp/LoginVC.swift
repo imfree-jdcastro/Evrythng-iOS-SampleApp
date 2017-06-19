@@ -12,7 +12,6 @@ import KRProgressHUD
 
 class LoginVC: UIViewController {
     
-    private let API_KEY = "wDKgZSnCvseQrWDf6YWmxgF61IZEX1cOuOuHjjixLoQeAAx0Tlb5DNBr5omdO5CrUxKeIsDfwagGEDfH"
     private var credentials: Credentials?
     
     // MARK: IBOutlets
@@ -40,11 +39,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func actionLoginAnonymous(_ sender: UIButton) {
-        
-        let newUser = User(jsonData: ["firstName": "Mymymy", "lastName": "lastlastlast", "email": "test2@email.com", "password": "testpassword"])!
-        
         KRProgressHUD.show()
-        self.createUser(user: nil) { (credentials, err) in
+        self.createAnonymousUser() { (credentials, err) in
             KRProgressHUD.dismiss()
             self.handleCredentialsResponse(credentials: credentials, err: err)
         }
@@ -84,10 +80,10 @@ class LoginVC: UIViewController {
     
     // MARK: Other Funcs
     
-    func createUser(user: User?, _ completion: ((Credentials?, Swift.Error?)->Void)?) {
+    func createAnonymousUser(_ completion: ((Credentials?, Swift.Error?)->Void)?) {
         
-        let apiManager = EvrythngApiManager(apiKey: API_KEY)
-        apiManager.authService.evrythngUserCreator(user: user).execute(completionHandler: { (credentials, err) in
+        let apiManager = EvrythngApiManager()
+        apiManager.authService.evrythngUserCreator(user: nil).execute(completionHandler: { (credentials, err) in
             if(err != nil) {
                 completion?(nil, err)
             } else {
@@ -108,7 +104,7 @@ class LoginVC: UIViewController {
     }
     
     func authenticateUser(email: String, password: String, completion: ((Credentials?, Swift.Error?)->Void)?) {
-        let apiManager = EvrythngApiManager(apiKey: API_KEY)
+        let apiManager = EvrythngApiManager(apiKey: Constants.API_KEY)
         apiManager.authService.evrythngUserAuthenticator(email: email, password: password).execute(completionHandler: { (credentials, err) in
             if(err != nil) {
                 completion?(nil, err)
