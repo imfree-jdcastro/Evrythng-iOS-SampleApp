@@ -32,10 +32,14 @@ class CreateUserVC: UIViewController {
                 return
         }
         
-        let newUser = User(jsonData: ["firstName": firstName, "lastName": lastName, "email": email, "password": password])!
+        let testUser = User()
+        testUser.firstName = firstName
+        testUser.lastName = lastName
+        testUser.email = email
+        testUser.password = password
         
         KRProgressHUD.show()
-        self.createUser(user: newUser) { (credentials, err) in
+        self.createUser(user: testUser) { (credentials, err) in
             self.handleCredentialsResponse(credentials: credentials, err: err)
         }
     }
