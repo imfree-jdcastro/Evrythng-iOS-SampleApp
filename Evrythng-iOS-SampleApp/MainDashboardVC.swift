@@ -114,8 +114,21 @@ class MainDashboardVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func back(sender: UIBarButtonItem) {
         self.logoutUser { (logoutResp, err) in
             if(err != nil) {
-                print("Error in Logging Out! \(#function)")
-                self.navigationController?.popViewController(animated: true)
+                print("Error in Logging Out! \(#function) \(err!)")
+                
+                if case EvrythngNetworkError.ResponseError(let errorResponse) = err! {
+                    if let errorList = errorResponse.errors {
+                        let message = errorList.joined(separator: ",")
+                        let alertDialog = UIAlertController.init(title: "Error", message: message, preferredStyle: .alert)
+                        alertDialog.addAction(UIAlertAction.init(title: "OK", style: .default, handler: { (action) in
+                            alertDialog.dismiss(animated: true, completion: nil)
+                            self.navigationController?.popViewController(animated: true)
+                        }))
+                        self.present(alertDialog, animated: true, completion: nil)
+                    }
+                } else {
+                    self.navigationController?.popViewController(animated: true)
+                }
             } else {
                 self.navigationController?.popViewController(animated: true)
             }
