@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		080A16B91EB078BE00601D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A16B81EB078BE00601D6F /* AppDelegate.swift */; };
+		080A16BB1EB078BE00601D6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A16BA1EB078BE00601D6F /* ViewController.swift */; };
+		080A16BE1EB078BE00601D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080A16BC1EB078BE00601D6F /* Main.storyboard */; };
+		080A16C01EB078BE00601D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080A16BF1EB078BE00601D6F /* Assets.xcassets */; };
+		080A16C31EB078BE00601D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080A16C11EB078BE00601D6F /* LaunchScreen.storyboard */; };
+		080A16CE1EB078BE00601D6F /* Evrythng_iOS_SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A16CD1EB078BE00601D6F /* Evrythng_iOS_SampleAppTests.swift */; };
+		080A16D91EB078BE00601D6F /* Evrythng_iOS_SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A16D81EB078BE00601D6F /* Evrythng_iOS_SampleAppUITests.swift */; };
+		086BA05D1EFB3404000B9B68 /* EvrythngiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CE13791EFA17AE00D0CB93 /* EvrythngiOS.framework */; };
+		086BA05E1EFB3404000B9B68 /* EvrythngiOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08CE13791EFA17AE00D0CB93 /* EvrythngiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		086BA05F1EFB3413000B9B68 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C7D1EFA1399007BD998 /* Alamofire.framework */; };
+		086BA0601EFB3413000B9B68 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C7E1EFA1399007BD998 /* AlamofireObjectMapper.framework */; };
+		086BA0631EFB3413000B9B68 /* Moya_ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C811EFA1399007BD998 /* Moya_ObjectMapper.framework */; };
+		086BA0641EFB3413000B9B68 /* Moya_SwiftyJSONMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C821EFA1399007BD998 /* Moya_SwiftyJSONMapper.framework */; };
+		086BA0651EFB3413000B9B68 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C831EFA1399007BD998 /* Moya.framework */; };
+		086BA0661EFB3413000B9B68 /* MoyaSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C841EFA1399007BD998 /* MoyaSugar.framework */; };
+		086BA0671EFB3413000B9B68 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C851EFA1399007BD998 /* ObjectMapper.framework */; };
+		086BA0681EFB3413000B9B68 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C861EFA1399007BD998 /* Result.framework */; };
+		086BA0691EFB3413000B9B68 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C871EFA1399007BD998 /* SwiftyJSON.framework */; };
+		0873FAA71EFB3F82000545CA /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C7F1EFA1399007BD998 /* KRActivityIndicatorView.framework */; };
+		0873FAA81EFB3F82000545CA /* KRActivityIndicatorView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C7F1EFA1399007BD998 /* KRActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0873FAA91EFB3F82000545CA /* KRProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089F9C801EFA1399007BD998 /* KRProgressHUD.framework */; };
+		0873FAAA1EFB3F82000545CA /* KRProgressHUD.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C801EFA1399007BD998 /* KRProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08C81DE31ED818AC00D23DA2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C81DE21ED818AC00D23DA2 /* LoginVC.swift */; };
+		08CA66D81EE165F900C1548C /* MainDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA66D71EE165F900C1548C /* MainDashboardVC.swift */; };
+		08CE14061EFA199800D0CB93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE14021EFA199800D0CB93 /* Constants.swift */; };
+		08CE14071EFA199800D0CB93 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE14031EFA199800D0CB93 /* CreateUserVC.swift */; };
+		08CE14081EFA199800D0CB93 /* evt_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08CE14041EFA199800D0CB93 /* evt_logo.jpg */; };
+		08CE14091EFA199800D0CB93 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE14051EFA199800D0CB93 /* TestVC.swift */; };
+		08CE140F1EFA1B3A00D0CB93 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C7D1EFA1399007BD998 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14101EFA1B3A00D0CB93 /* AlamofireObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C7E1EFA1399007BD998 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14131EFA1B3A00D0CB93 /* Moya_ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C811EFA1399007BD998 /* Moya_ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14141EFA1B3A00D0CB93 /* Moya_SwiftyJSONMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C821EFA1399007BD998 /* Moya_SwiftyJSONMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14151EFA1B3A00D0CB93 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C831EFA1399007BD998 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14161EFA1B3A00D0CB93 /* MoyaSugar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C841EFA1399007BD998 /* MoyaSugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14171EFA1B3A00D0CB93 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C851EFA1399007BD998 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14181EFA1B3A00D0CB93 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C861EFA1399007BD998 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		08CE14191EFA1B3A00D0CB93 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 089F9C871EFA1399007BD998 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		080A16CA1EB078BE00601D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080A16AD1EB078BE00601D6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 080A16B41EB078BE00601D6F;
+			remoteInfo = "Evrythng-iOS-SampleApp";
+		};
+		080A16D51EB078BE00601D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080A16AD1EB078BE00601D6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 080A16B41EB078BE00601D6F;
+			remoteInfo = "Evrythng-iOS-SampleApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		08CE140D1EFA1B2C00D0CB93 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				08CE140F1EFA1B3A00D0CB93 /* Alamofire.framework in CopyFiles */,
+				0873FAA81EFB3F82000545CA /* KRActivityIndicatorView.framework in CopyFiles */,
+				08CE14101EFA1B3A00D0CB93 /* AlamofireObjectMapper.framework in CopyFiles */,
+				08CE14131EFA1B3A00D0CB93 /* Moya_ObjectMapper.framework in CopyFiles */,
+				08CE14141EFA1B3A00D0CB93 /* Moya_SwiftyJSONMapper.framework in CopyFiles */,
+				08CE14151EFA1B3A00D0CB93 /* Moya.framework in CopyFiles */,
+				08CE14161EFA1B3A00D0CB93 /* MoyaSugar.framework in CopyFiles */,
+				08CE14171EFA1B3A00D0CB93 /* ObjectMapper.framework in CopyFiles */,
+				08CE14181EFA1B3A00D0CB93 /* Result.framework in CopyFiles */,
+				08CE14191EFA1B3A00D0CB93 /* SwiftyJSON.framework in CopyFiles */,
+				0873FAAA1EFB3F82000545CA /* KRProgressHUD.framework in CopyFiles */,
+				086BA05E1EFB3404000B9B68 /* EvrythngiOS.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		080A16B51EB078BE00601D6F /* Evrythng-iOS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Evrythng-iOS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		080A16B81EB078BE00601D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		080A16BA1EB078BE00601D6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		080A16BD1EB078BE00601D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		080A16BF1EB078BE00601D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		080A16C21EB078BE00601D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		080A16C41EB078BE00601D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080A16C91EB078BE00601D6F /* Evrythng-iOS-SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Evrythng-iOS-SampleAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		080A16CD1EB078BE00601D6F /* Evrythng_iOS_SampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evrythng_iOS_SampleAppTests.swift; sourceTree = "<group>"; };
+		080A16CF1EB078BE00601D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080A16D41EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Evrythng-iOS-SampleAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		080A16D81EB078BE00601D6F /* Evrythng_iOS_SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evrythng_iOS_SampleAppUITests.swift; sourceTree = "<group>"; };
+		080A16DA1EB078BE00601D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089F9C7D1EFA1399007BD998 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		089F9C7E1EFA1399007BD998 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		089F9C7F1EFA1399007BD998 /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KRActivityIndicatorView.framework; sourceTree = "<group>"; };
+		089F9C801EFA1399007BD998 /* KRProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KRProgressHUD.framework; sourceTree = "<group>"; };
+		089F9C811EFA1399007BD998 /* Moya_ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya_ObjectMapper.framework; sourceTree = "<group>"; };
+		089F9C821EFA1399007BD998 /* Moya_SwiftyJSONMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya_SwiftyJSONMapper.framework; sourceTree = "<group>"; };
+		089F9C831EFA1399007BD998 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		089F9C841EFA1399007BD998 /* MoyaSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoyaSugar.framework; sourceTree = "<group>"; };
+		089F9C851EFA1399007BD998 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
+		089F9C861EFA1399007BD998 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		089F9C871EFA1399007BD998 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		08C81DE21ED818AC00D23DA2 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		08CA66D71EE165F900C1548C /* MainDashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDashboardVC.swift; sourceTree = "<group>"; };
+		08CE13791EFA17AE00D0CB93 /* EvrythngiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EvrythngiOS.framework; sourceTree = "<group>"; };
+		08CE14021EFA199800D0CB93 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		08CE14031EFA199800D0CB93 /* CreateUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		08CE14041EFA199800D0CB93 /* evt_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = evt_logo.jpg; sourceTree = "<group>"; };
+		08CE14051EFA199800D0CB93 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		080A16B21EB078BE00601D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				086BA05D1EFB3404000B9B68 /* EvrythngiOS.framework in Frameworks */,
+				0873FAA71EFB3F82000545CA /* KRActivityIndicatorView.framework in Frameworks */,
+				086BA05F1EFB3413000B9B68 /* Alamofire.framework in Frameworks */,
+				086BA0601EFB3413000B9B68 /* AlamofireObjectMapper.framework in Frameworks */,
+				086BA0631EFB3413000B9B68 /* Moya_ObjectMapper.framework in Frameworks */,
+				086BA0641EFB3413000B9B68 /* Moya_SwiftyJSONMapper.framework in Frameworks */,
+				086BA0651EFB3413000B9B68 /* Moya.framework in Frameworks */,
+				086BA0661EFB3413000B9B68 /* MoyaSugar.framework in Frameworks */,
+				086BA0671EFB3413000B9B68 /* ObjectMapper.framework in Frameworks */,
+				086BA0681EFB3413000B9B68 /* Result.framework in Frameworks */,
+				0873FAA91EFB3F82000545CA /* KRProgressHUD.framework in Frameworks */,
+				086BA0691EFB3413000B9B68 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		080A16C61EB078BE00601D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		080A16D11EB078BE00601D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080A16AC1EB078BE00601D6F = {
+			isa = PBXGroup;
+			children = (
+				080A16B71EB078BE00601D6F /* Evrythng-iOS-SampleApp */,
+				080A16CC1EB078BE00601D6F /* Evrythng-iOS-SampleAppTests */,
+				080A16D71EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests */,
+				080A16B61EB078BE00601D6F /* Products */,
+				6DCA41882F413B9484B802BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		080A16B61EB078BE00601D6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				080A16B51EB078BE00601D6F /* Evrythng-iOS-SampleApp.app */,
+				080A16C91EB078BE00601D6F /* Evrythng-iOS-SampleAppTests.xctest */,
+				080A16D41EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		080A16B71EB078BE00601D6F /* Evrythng-iOS-SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				08CE14041EFA199800D0CB93 /* evt_logo.jpg */,
+				08CE14021EFA199800D0CB93 /* Constants.swift */,
+				08CE14031EFA199800D0CB93 /* CreateUserVC.swift */,
+				08CE14051EFA199800D0CB93 /* TestVC.swift */,
+				08CA66D71EE165F900C1548C /* MainDashboardVC.swift */,
+				080A16BA1EB078BE00601D6F /* ViewController.swift */,
+				08C81DE21ED818AC00D23DA2 /* LoginVC.swift */,
+				080A16B81EB078BE00601D6F /* AppDelegate.swift */,
+				080A16BC1EB078BE00601D6F /* Main.storyboard */,
+				080A16BF1EB078BE00601D6F /* Assets.xcassets */,
+				080A16C11EB078BE00601D6F /* LaunchScreen.storyboard */,
+				080A16C41EB078BE00601D6F /* Info.plist */,
+			);
+			path = "Evrythng-iOS-SampleApp";
+			sourceTree = "<group>";
+		};
+		080A16CC1EB078BE00601D6F /* Evrythng-iOS-SampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				080A16CD1EB078BE00601D6F /* Evrythng_iOS_SampleAppTests.swift */,
+				080A16CF1EB078BE00601D6F /* Info.plist */,
+			);
+			path = "Evrythng-iOS-SampleAppTests";
+			sourceTree = "<group>";
+		};
+		080A16D71EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				080A16D81EB078BE00601D6F /* Evrythng_iOS_SampleAppUITests.swift */,
+				080A16DA1EB078BE00601D6F /* Info.plist */,
+			);
+			path = "Evrythng-iOS-SampleAppUITests";
+			sourceTree = "<group>";
+		};
+		6DCA41882F413B9484B802BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08CE13791EFA17AE00D0CB93 /* EvrythngiOS.framework */,
+				089F9C7D1EFA1399007BD998 /* Alamofire.framework */,
+				089F9C7E1EFA1399007BD998 /* AlamofireObjectMapper.framework */,
+				089F9C7F1EFA1399007BD998 /* KRActivityIndicatorView.framework */,
+				089F9C801EFA1399007BD998 /* KRProgressHUD.framework */,
+				089F9C811EFA1399007BD998 /* Moya_ObjectMapper.framework */,
+				089F9C821EFA1399007BD998 /* Moya_SwiftyJSONMapper.framework */,
+				089F9C831EFA1399007BD998 /* Moya.framework */,
+				089F9C841EFA1399007BD998 /* MoyaSugar.framework */,
+				089F9C851EFA1399007BD998 /* ObjectMapper.framework */,
+				089F9C861EFA1399007BD998 /* Result.framework */,
+				089F9C871EFA1399007BD998 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		080A16B41EB078BE00601D6F /* Evrythng-iOS-SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 080A16DD1EB078BE00601D6F /* Build configuration list for PBXNativeTarget "Evrythng-iOS-SampleApp" */;
+			buildPhases = (
+				080A16B11EB078BE00601D6F /* Sources */,
+				080A16B21EB078BE00601D6F /* Frameworks */,
+				080A16B31EB078BE00601D6F /* Resources */,
+				08CE140D1EFA1B2C00D0CB93 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Evrythng-iOS-SampleApp";
+			productName = "Evrythng-iOS-SampleApp";
+			productReference = 080A16B51EB078BE00601D6F /* Evrythng-iOS-SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		080A16C81EB078BE00601D6F /* Evrythng-iOS-SampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 080A16E01EB078BE00601D6F /* Build configuration list for PBXNativeTarget "Evrythng-iOS-SampleAppTests" */;
+			buildPhases = (
+				080A16C51EB078BE00601D6F /* Sources */,
+				080A16C61EB078BE00601D6F /* Frameworks */,
+				080A16C71EB078BE00601D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				080A16CB1EB078BE00601D6F /* PBXTargetDependency */,
+			);
+			name = "Evrythng-iOS-SampleAppTests";
+			productName = "Evrythng-iOS-SampleAppTests";
+			productReference = 080A16C91EB078BE00601D6F /* Evrythng-iOS-SampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		080A16D31EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 080A16E31EB078BE00601D6F /* Build configuration list for PBXNativeTarget "Evrythng-iOS-SampleAppUITests" */;
+			buildPhases = (
+				080A16D01EB078BE00601D6F /* Sources */,
+				080A16D11EB078BE00601D6F /* Frameworks */,
+				080A16D21EB078BE00601D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				080A16D61EB078BE00601D6F /* PBXTargetDependency */,
+			);
+			name = "Evrythng-iOS-SampleAppUITests";
+			productName = "Evrythng-iOS-SampleAppUITests";
+			productReference = 080A16D41EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		080A16AD1EB078BE00601D6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ImFree;
+				TargetAttributes = {
+					080A16B41EB078BE00601D6F = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DGZH36Y5TW;
+						ProvisioningStyle = Automatic;
+					};
+					080A16C81EB078BE00601D6F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 080A16B41EB078BE00601D6F;
+					};
+					080A16D31EB078BE00601D6F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 080A16B41EB078BE00601D6F;
+					};
+				};
+			};
+			buildConfigurationList = 080A16B01EB078BE00601D6F /* Build configuration list for PBXProject "Evrythng-iOS-SampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 080A16AC1EB078BE00601D6F;
+			productRefGroup = 080A16B61EB078BE00601D6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				080A16B41EB078BE00601D6F /* Evrythng-iOS-SampleApp */,
+				080A16C81EB078BE00601D6F /* Evrythng-iOS-SampleAppTests */,
+				080A16D31EB078BE00601D6F /* Evrythng-iOS-SampleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		080A16B31EB078BE00601D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080A16C31EB078BE00601D6F /* LaunchScreen.storyboard in Resources */,
+				080A16C01EB078BE00601D6F /* Assets.xcassets in Resources */,
+				08CE14081EFA199800D0CB93 /* evt_logo.jpg in Resources */,
+				080A16BE1EB078BE00601D6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		080A16C71EB078BE00601D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		080A16D21EB078BE00601D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		080A16B11EB078BE00601D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08CE14061EFA199800D0CB93 /* Constants.swift in Sources */,
+				080A16BB1EB078BE00601D6F /* ViewController.swift in Sources */,
+				080A16B91EB078BE00601D6F /* AppDelegate.swift in Sources */,
+				08CE14071EFA199800D0CB93 /* CreateUserVC.swift in Sources */,
+				08CA66D81EE165F900C1548C /* MainDashboardVC.swift in Sources */,
+				08C81DE31ED818AC00D23DA2 /* LoginVC.swift in Sources */,
+				08CE14091EFA199800D0CB93 /* TestVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		080A16C51EB078BE00601D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080A16CE1EB078BE00601D6F /* Evrythng_iOS_SampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		080A16D01EB078BE00601D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080A16D91EB078BE00601D6F /* Evrythng_iOS_SampleAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		080A16CB1EB078BE00601D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 080A16B41EB078BE00601D6F /* Evrythng-iOS-SampleApp */;
+			targetProxy = 080A16CA1EB078BE00601D6F /* PBXContainerItemProxy */;
+		};
+		080A16D61EB078BE00601D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 080A16B41EB078BE00601D6F /* Evrythng-iOS-SampleApp */;
+			targetProxy = 080A16D51EB078BE00601D6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		080A16BC1EB078BE00601D6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				080A16BD1EB078BE00601D6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		080A16C11EB078BE00601D6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				080A16C21EB078BE00601D6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		080A16DB1EB078BE00601D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(SRCROOT)/**",
+					"$(inherited)/**",
+					"$(SRCROOT)/**",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		080A16DC1EB078BE00601D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		080A16DE1EB078BE00601D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DGZH36Y5TW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/build/Debug-iphoneos/EvrythngiOS/**",
+					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(PROJECT_DIR)/build/Debug-iphoneos/EvrythngiOS/**",
+					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Evrythng-iOS-SampleApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"KRActivityIndicatorView\"",
+					"-framework",
+					"\"KRProgressHUD\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"MoyaSugar\"",
+					"-framework",
+					"\"Moya_ObjectMapper\"",
+					"-framework",
+					"\"Moya_SwiftyJSONMapper\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imfreemobile.Evrythng-iOS-SampleApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		080A16DF1EB078BE00601D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DGZH36Y5TW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/EvrythngiOS",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Evrythng-iOS-SampleApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"KRActivityIndicatorView\"",
+					"-framework",
+					"\"KRProgressHUD\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"MoyaSugar\"",
+					"-framework",
+					"\"Moya_ObjectMapper\"",
+					"-framework",
+					"\"Moya_SwiftyJSONMapper\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imfreemobile.Evrythng-iOS-SampleApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		080A16E11EB078BE00601D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Evrythng-iOS-SampleAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imfreemobile.Evrythng-iOS-SampleAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evrythng-iOS-SampleApp.app/Evrythng-iOS-SampleApp";
+			};
+			name = Debug;
+		};
+		080A16E21EB078BE00601D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Evrythng-iOS-SampleAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imfreemobile.Evrythng-iOS-SampleAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evrythng-iOS-SampleApp.app/Evrythng-iOS-SampleApp";
+			};
+			name = Release;
+		};
+		080A16E41EB078BE00601D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Evrythng-iOS-SampleAppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imfreemobile.Evrythng-iOS-SampleAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Evrythng-iOS-SampleApp";
+			};
+			name = Debug;
+		};
+		080A16E51EB078BE00601D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Evrythng-iOS-SampleAppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imfreemobile.Evrythng-iOS-SampleAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Evrythng-iOS-SampleApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		080A16B01EB078BE00601D6F /* Build configuration list for PBXProject "Evrythng-iOS-SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080A16DB1EB078BE00601D6F /* Debug */,
+				080A16DC1EB078BE00601D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		080A16DD1EB078BE00601D6F /* Build configuration list for PBXNativeTarget "Evrythng-iOS-SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080A16DE1EB078BE00601D6F /* Debug */,
+				080A16DF1EB078BE00601D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		080A16E01EB078BE00601D6F /* Build configuration list for PBXNativeTarget "Evrythng-iOS-SampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080A16E11EB078BE00601D6F /* Debug */,
+				080A16E21EB078BE00601D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		080A16E31EB078BE00601D6F /* Build configuration list for PBXNativeTarget "Evrythng-iOS-SampleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080A16E41EB078BE00601D6F /* Debug */,
+				080A16E51EB078BE00601D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 080A16AD1EB078BE00601D6F /* Project object */;
+}

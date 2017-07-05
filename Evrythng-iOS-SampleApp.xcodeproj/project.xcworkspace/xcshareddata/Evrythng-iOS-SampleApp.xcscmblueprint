@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0C7FE8B92EC47173EF3A8565C42D727CA5371A2C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0C7FE8B92EC47173EF3A8565C42D727CA5371A2C" : 9223372036854775807,
+    "1D80E61AE58F23F5DD916455B7A27BDFCC8E0432" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "64C661C6-FFA4-48AA-9985-1223C73C65B0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0C7FE8B92EC47173EF3A8565C42D727CA5371A2C" : "Evrythng-iOS-SampleApp\/",
+    "1D80E61AE58F23F5DD916455B7A27BDFCC8E0432" : "Evrythng-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Evrythng-iOS-SampleApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Evrythng-iOS-SampleApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/imfree-jdcastro\/Evrythng-iOS-SampleApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C7FE8B92EC47173EF3A8565C42D727CA5371A2C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/imfree-jdcastro\/Evrythng-iOS-SDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D80E61AE58F23F5DD916455B7A27BDFCC8E0432"
+    }
+  ]
+}

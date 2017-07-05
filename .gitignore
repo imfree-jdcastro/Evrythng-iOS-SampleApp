@@ -63,12 +63,12 @@ Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-S
 Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests.debug.xcconfig
 Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests.modulemap
 Pods/Target Support Files/Pods-Evrythng-iOS-SampleAppUITests/Pods-Evrythng-iOS-SampleAppUITests.release.xcconfig
-Evrythng-iOS-SampleApp.xcodeproj/project.pbxproj
-Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata
-Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcshareddata/Evrythng-iOS-SampleApp.xcscmblueprint
-Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
-Evrythng-iOS-SampleApp.xcworkspace/contents.xcworkspacedata
-Evrythng-iOS-SampleApp.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
+#Evrythng-iOS-SampleApp.xcodeproj/project.pbxproj
+#Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+#Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcshareddata/Evrythng-iOS-SampleApp.xcscmblueprint
+#Evrythng-iOS-SampleApp.xcodeproj/project.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
+#Evrythng-iOS-SampleApp.xcworkspace/contents.xcworkspacedata
+#Evrythng-iOS-SampleApp.xcworkspace/xcuserdata/imfree.jdcastro.xcuserdatad/UserInterfaceState.xcuserstate
 Pods/Alamofire/LICENSE
 Pods/Alamofire/README.md
 Pods/Alamofire/Source/AFError.swift
