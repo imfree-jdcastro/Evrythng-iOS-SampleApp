@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     public var credentials: Credentials?
     
+    private let imagePicker = UIImagePickerController()
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var ivReference: UIImageView!
@@ -30,6 +32,10 @@ class ViewController: UIViewController {
         evrythngScanner.scanBarcode()
     }
     
+    @IBAction func actionScanFromGallery(_ sender: UIButton) {
+        launchGallery()
+    }
+    
     // MARK: ViewController Lifecycle
     
     override func viewDidLoad() {
@@ -39,6 +45,14 @@ class ViewController: UIViewController {
         /*self.createUser(completion: { [weak self] (user) in
          self.readThng()
          })*/
+    }
+    
+    private func launchGallery() {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     func readThng(completion: ((Thng?)->Void)?) {
@@ -98,16 +112,38 @@ extension ViewController {
     }
 }
 
+// MARK: UIImagePickerControllerDelegate
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+ 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("\(#function) Info: \(info)")
+        
+        let evrythngScanner = EvrythngScanner.init(presentedBy: self, withResultDelegate: self)
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            picker.dismiss(animated: true, completion: {
+                evrythngScanner.scanBarcodeImage(image: pickedImage)
+            })
+        }
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("\(#function)")
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+}
+
 // MARK: EvrythngDelegate
 
 extension ViewController: EvrythngIdentifierResultDelegate {
     
     public func evrythngScannerWillStartIdentify() {
+        print("\(#function)")
         KRProgressHUD.show()
     }
     
     public func evrythngScannerDidFinishIdentify(scanIdentificationsResponse: EvrythngScanIdentificationsResponse?, value: String, error: Swift.Error?) {
-        
+        print("\(#function)")
         KRProgressHUD.dismiss()
         
         if let err = error {
@@ -121,8 +157,10 @@ extension ViewController: EvrythngIdentifierResultDelegate {
             if let results = scanResponse.results, results.count > 0 {
                 print("Scan Result Successful: \(value)")
                 
-                if let thng = scanResponse.results?.first?.thng {
-                    self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(thng)")
+                //if let thng = scanResponse.results?.first?.thng {
+                // self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(thng)")
+                if scanResponse.results?.first?.thng != nil {
+                    self.showAlertDialog(title: "Congratulations", message: "Thng Identified: \(value)")
                 } else if scanResponse.results?.first?.product != nil {
                     self.showAlertDialog(title: "Congratulations", message: "Product Identified: \(value)")
                 } else {

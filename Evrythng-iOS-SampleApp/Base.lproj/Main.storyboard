@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ujS-2f-IJZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ujS-2f-IJZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--TestVC-->
         <scene sceneID="fW1-Lp-DIG">
             <objects>
-                <viewController id="6NG-ba-Li0" customClass="TestVC" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6NG-ba-Li0" customClass="TestVC" customModule="Evrythng_iOS_SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uBd-aQ-X0b"/>
                         <viewControllerLayoutGuide type="bottom" id="INS-Os-4Y4"/>
@@ -56,7 +56,7 @@
         <!--Scan Result-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Evrythng_iOS_SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As5-sh-atx">
-                                <rect key="frame" x="97" y="593" width="180" height="34"/>
+                                <rect key="frame" x="97" y="573" width="180" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.59258884089999997" blue="0.23558104390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="9dF-X6-kdB"/>
@@ -104,22 +104,45 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="-NA-" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d7T-ET-Fvg">
-                                <rect key="frame" x="16" y="262" width="343" height="299"/>
+                                <rect key="frame" x="16" y="262" width="343" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKQ-2l-yx6">
+                                <rect key="frame" x="97" y="615" width="180" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.59258884089999997" blue="0.23558104390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="DnE-cl-xkI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Scan From Gallery">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionScanFromGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpu-OT-3hp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gKQ-2l-yx6" firstAttribute="leading" secondItem="As5-sh-atx" secondAttribute="leading" id="0Ao-FS-VNv"/>
                             <constraint firstItem="Qgz-aQ-vNg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ak7-jZ-0VU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="As5-sh-atx" secondAttribute="bottom" constant="40" id="H7d-RK-RU9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="As5-sh-atx" secondAttribute="bottom" constant="60" id="H7d-RK-RU9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gKQ-2l-yx6" secondAttribute="bottom" constant="18" id="HSW-w6-rad"/>
                             <constraint firstItem="As5-sh-atx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VXk-bW-het"/>
                             <constraint firstItem="As5-sh-atx" firstAttribute="top" secondItem="d7T-ET-Fvg" secondAttribute="bottom" constant="32" id="Vre-UM-zrY"/>
                             <constraint firstItem="Qgz-aQ-vNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wjg-TI-yR7"/>
+                            <constraint firstItem="gKQ-2l-yx6" firstAttribute="top" secondItem="As5-sh-atx" secondAttribute="bottom" constant="8" id="fKs-vQ-6kU"/>
                             <constraint firstItem="d7T-ET-Fvg" firstAttribute="top" secondItem="gjC-bi-usR" secondAttribute="bottom" constant="8" id="fgh-Kk-DmF"/>
                             <constraint firstItem="gjC-bi-usR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="mhR-V7-iIP"/>
                             <constraint firstItem="gjC-bi-usR" firstAttribute="top" secondItem="Qgz-aQ-vNg" secondAttribute="bottom" constant="41" id="nam-VW-4pw"/>
+                            <constraint firstItem="gKQ-2l-yx6" firstAttribute="trailing" secondItem="As5-sh-atx" secondAttribute="trailing" id="qH4-MY-YZI"/>
                             <constraint firstAttribute="trailing" secondItem="d7T-ET-Fvg" secondAttribute="trailing" constant="16" id="rHx-GG-2Zz"/>
                             <constraint firstItem="d7T-ET-Fvg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="yum-nC-IU1"/>
                         </constraints>
@@ -137,7 +160,7 @@
         <!--Main DashboardVC-->
         <scene sceneID="bh5-9w-5k4">
             <objects>
-                <viewController id="Hbo-Yl-KgM" customClass="MainDashboardVC" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hbo-Yl-KgM" customClass="MainDashboardVC" customModule="Evrythng_iOS_SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fjs-aF-NyO"/>
                         <viewControllerLayoutGuide type="bottom" id="BdP-vR-a2r"/>
@@ -253,7 +276,7 @@
         <!--Harness App EVT iOS SDK-->
         <scene sceneID="sFh-ev-TSm">
             <objects>
-                <viewController id="AES-xI-2Ua" customClass="LoginVC" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AES-xI-2Ua" customClass="LoginVC" customModule="Evrythng_iOS_SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="siN-Ye-q0P"/>
                         <viewControllerLayoutGuide type="bottom" id="G5m-Sd-ILy"/>
@@ -398,7 +421,7 @@
         <!--Create UserVC-->
         <scene sceneID="gIL-9x-cDi">
             <objects>
-                <viewController id="gN2-sO-KYn" customClass="CreateUserVC" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gN2-sO-KYn" customClass="CreateUserVC" customModule="Evrythng_iOS_SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RS8-EL-g0P"/>
                         <viewControllerLayoutGuide type="bottom" id="TEE-cY-il8"/>
